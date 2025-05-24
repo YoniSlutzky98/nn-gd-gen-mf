@@ -1,0 +1,32 @@
+{
+  "n_rows": 5,
+  "n_cols": 5,
+  "gt_rank": 1,
+  "gt_norm": 1.0,
+  "num_seeds": 8,
+  "completion": false,
+  "num_measurements": 15,
+  "activation": "Leaky ReLU",
+  "negative_slope": 0.2,
+
+  "gnc_num_samples": 1000000000,
+  "gnc_batch_sizes": [10000000],
+  "gnc_eps_train": 0.0035,
+  "gnc_init": "unif",
+  "gnc_normalize": true,
+  "gnc_softening": 1e-6,
+
+  "gd_lrs": [0.01],
+  "gd_epochs": 50000,
+  "gd_init_scales": [0.001, 0.001, 0.001, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+  "gd_log_period": 100,
+  "gd_print_period": 10000,
+  "gd_momentum": 0.0,
+  "gd_verbose": true,
+
+  "width": 5,
+  "depths": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+
+  "results_dir": "./results",
+  "figures_dir": "./figures"
+}

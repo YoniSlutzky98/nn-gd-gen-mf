@@ -1,0 +1,5 @@
+numpy==2.2.4
+matplotlib==3.10.0
+torch==2.7.0
+pandas==2.2.3
+gputil==1.4.0
