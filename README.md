@@ -21,7 +21,7 @@ By default, results and figures are saved to subdirectories in the working direc
 For a quick start, use the following command line script to run the experiment in Figure 1 for the linear activation function:   
 
 ```
-python width_experiment.py --config ./configs/width/width_gt_rank=1_act=Linear_gnc_init=gauss.json
+python width_experiments.py --config ./configs/width/width_gt_rank=1_act=Linear_gnc_init=gauss.json
 ```
 
 Various hyperparameters are configurable, see ```./common/parser.py```. 
@@ -53,7 +53,7 @@ By default, results and figures are saved to subdirectories in the working direc
 For a quick start, use the following command line script to run the experiment in Figure 2 for the linear activation function:   
 
 ```
-python width_experiment.py --config ./configs/depth/depth_gt_rank=1_act=Linear_gnc_init=gauss.json
+python width_experiments.py --config ./configs/depth/depth_gt_rank=1_act=Linear_gnc_init=gauss.json
 ```
 
 Various hyperparameters are configurable, see ```./common/parser.py```. 
