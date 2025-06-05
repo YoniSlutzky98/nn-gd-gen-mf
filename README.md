@@ -1,5 +1,5 @@
-# Do Neural Nets Need Gradient Descent to Generalize? Matrix Factorization as a Theoretical Testbed
-Official implementation for the experiments in [Do Neural Nets Need Gradient Descent to Generalize? Matrix Factorization as a Theoretical Testbed](XXX), based on the [PyTorch](https://pytorch.org/) library.
+# Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study
+Official implementation for the experiments in [Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study](https://arxiv.org/abs/2506.03931), based on the [PyTorch](https://pytorch.org/) library.
 
 ## Installing Requirements
 
@@ -88,10 +88,10 @@ The following table details which experiment is reproduced via which config file
 For citing the paper you can use:
 
 ```
-@article{TBD,
-  title={Do Neural Nets Need Gradient Descent to Generalize? Matrix Factorization as a Theoretical Testbed},
+@article{Alexander2025do,
+  title={Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study},
   author={Alexander, Yotam and Slutzky, Yonatan and Ran-Milo, Yuval and Cohen, Nadav},
-  journal={TBD},
+  journal={arXiv preprint arXiv:2506.03931},
   year={2025}
 }
 ```
