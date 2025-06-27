@@ -88,7 +88,7 @@ The following table details which experiment is reproduced via which config file
 For citing the paper you can use:
 
 ```
-@article{Alexander2025do,
+@article{alexander2025neural,
   title={Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study},
   author={Alexander, Yotam and Slutzky, Yonatan and Ran-Milo, Yuval and Cohen, Nadav},
   journal={arXiv preprint arXiv:2506.03931},
