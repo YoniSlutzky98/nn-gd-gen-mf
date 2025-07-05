@@ -99,7 +99,7 @@ def parse_args(experiment: str) -> argparse.Namespace:  # noqa: C901 – a bit l
     g.add_argument("--gd_log_period", type=int, default=int(1e2), help="Log period for GD")
     g.add_argument("--gd_print_period", type=int, default=int(1e4), help="Print period for GD (if gd_verbose=True)")
     g.add_argument("--gd_momentum", type=float, default=0.0, help="Momentum for GD")
-    g.add_argument("--gd_verbose", action="store_true", default=False, help="Should G&C matrix factorization be verbose")
+    g.add_argument("--gd_verbose", action="store_true", default=False, help="Should GD training be verbose")
 
     # ------------------------------------------------------------------
     # Sweep‑specific                                                     |
