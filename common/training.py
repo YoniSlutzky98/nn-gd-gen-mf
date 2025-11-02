@@ -81,8 +81,12 @@ def train_gnc(seed: int,
         act = activation()
 
     torch.manual_seed(seed)
-    prior_gen_losses = []
-    gnc_gen_losses = []
+    
+    all_sum  = 0.0
+    all_cnt  = 0
+    succ_sum = 0.0
+    succ_cnt = 0
+    
     for batch in range(math.ceil(num_samples / batch_size)):
         bs = min(batch_size, num_samples - batch * batch_size)
         Y = torch.eye(n_rows, device=device).unsqueeze(0).expand(bs, n_rows, n_rows)
@@ -98,9 +102,16 @@ def train_gnc(seed: int,
             Y = Y / (norms + softening)
         train_losses = gnc_sensing_loss(Y, A_train, b_train)
         succ_mask = train_losses < eps_train
-        gen_losses = gnc_sensing_loss(Y, A_test, b_test)
-        prior_gen_losses.extend(gen_losses.cpu().tolist())
-        gnc_gen_losses.extend(gen_losses[succ_mask].cpu().tolist())
-    mean_prior = sum(prior_gen_losses) / len(prior_gen_losses)
-    mean_gnc = sum(gnc_gen_losses) / len(gnc_gen_losses) if gnc_gen_losses else 1
-    return mean_prior, mean_gnc
+        gen_losses = gnc_sensing_loss(Y, A_test, b_test).to(torch.float64)
+        
+        all_sum += gen_losses.sum().item()
+        all_cnt += gen_losses.numel()
+        
+        if succ_mask.any():
+            succ_losses = gen_losses[succ_mask]
+            succ_sum += succ_losses.sum().item()
+            succ_cnt += succ_losses.numel()
+
+    mean_prior = all_sum / all_cnt
+    mean_gnc = succ_sum / succ_cnt if succ_cnt > 0 else 1
+    return mean_prior, mean_gnc, zero_count
