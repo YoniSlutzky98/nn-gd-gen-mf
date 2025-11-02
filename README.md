@@ -1,5 +1,5 @@
-# Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study
-Official implementation for the experiments in [Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study](https://arxiv.org/abs/2506.03931), based on the [PyTorch](https://pytorch.org/) library.
+# Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study (NeurIPS 2025)
+Official implementation for the experiments in [Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study](https://arxiv.org/abs/2506.03931) (NeurIPS 2025), based on the [PyTorch](https://pytorch.org/) library.
 
 ## Installing Requirements
 
@@ -88,10 +88,10 @@ The following table details which experiment is reproduced via which config file
 For citing the paper you can use:
 
 ```
-@article{alexander2025neural,
+@inproceedings{alexander2025neural,
   title={Do Neural Networks Need Gradient Descent to Generalize? A Theoretical Study},
   author={Alexander, Yotam and Slutzky, Yonatan and Ran-Milo, Yuval and Cohen, Nadav},
-  journal={arXiv preprint arXiv:2506.03931},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2025}
 }
 ```
